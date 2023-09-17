@@ -54,8 +54,10 @@ for word in words:
     wje=[]
     #print(wrd)
     for i in wrd:
+        counter+=1
         if i in wakcje:
             wje.append(i)
+            counter-=1
         #else:
             #wrd.remove
     wje_c=wje.copy()
@@ -65,9 +67,4 @@ for word in words:
             counter+=1
         else:
             break
-    if len(wje_c)>=7:
-        #print(wje_c[0])
-    #print(wje, counter)
-        if wje_c[1]!="a":
-            wje_c.pop(1)
-    print(wje_c)
+    print(counter)
