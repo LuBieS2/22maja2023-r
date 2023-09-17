@@ -1,9 +1,4 @@
 #https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2023/Informatyka/EINP-R2-100-2305.pdf
-
-
-from xml.dom.expatbuilder import ParseEscape
-
-
 file=open("przyklad.txt", "r")
 words=list(map(str.strip, file.readlines()))
 #4.1
