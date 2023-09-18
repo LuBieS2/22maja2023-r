@@ -41,11 +41,10 @@ for word in words:
     print(w_count)
 #4.3
 print("#4.3")
-def remove_digits(word):
+for word in words:
     options=[]
     empty=len(word)
     options.append(empty)
-    
     wakacje=["w", "a", "k", "a", "c", "j", "e"]
     letter_index=0
     i=0
@@ -59,6 +58,4 @@ def remove_digits(word):
         else:
             counter+=1
         i+=1
-    return min(options)
-for word in words:
-    print(remove_digits(word))
+    print(min(options))
