@@ -29,12 +29,8 @@ for word in words:
     wakacje=[w,a,k,c,j,e]
     print(wakacje)
     w_count=0
-    for i in wakacje:
-        w_count+=i
-    #print(w_count)
     mi=min(wakacje)
     maks=max(wakacje)
-  
     if wakacje[1]<2:
         w_count=0
     elif (wakacje[1]==maks or wakacje[1]>maks/2)and mi>=wakacje[1]/2:
@@ -45,26 +41,24 @@ for word in words:
     print(w_count)
 #4.3
 print("#4.3")
-for word in words:
+def remove_digits(word):
+    options=[]
+    empty=len(word)
+    options.append(empty)
+    
+    wakacje=["w", "a", "k", "a", "c", "j", "e"]
+    letter_index=0
+    i=0
     counter=0
-    wakcje=["w", "a", "k", "a", "c", "j","e"]
-    wrd=[]
-    for i in word:
-        wrd.append(i)
-    wje=[]
-    #print(wrd)
-    for i in wrd:
-        counter+=1
-        if i in wakcje:
-            wje.append(i)
-            counter-=1
-        #else:
-            #wrd.remove
-    wje_c=wje.copy()
-    for i in wje:
-        if i !="w":
-            wje_c.remove(i)
-            counter+=1
+    while i<len(word):
+        if word[i]==wakacje[letter_index]:
+            if letter_index==len(wakacje)-1:
+                options.append(len(word)-i-1+counter)
+                letter_index=-1
+            letter_index+=1
         else:
-            break
-    print(counter)
+            counter+=1
+        i+=1
+    return min(options)
+for word in words:
+    print(remove_digits(word))
