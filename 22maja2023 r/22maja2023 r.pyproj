@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{4d11cfdc-adbc-4c27-94fc-74d27041b96e}</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>_22maja2023_r.py</StartupFile>
+    <StartupFile>z1_2.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,6 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="z1_2.py" />
     <Compile Include="_22maja2023_r.py" />
   </ItemGroup>
   <ItemGroup>
@@ -30,6 +31,7 @@
     <Content Include="owoce.txt" />
     <Content Include="przyklad.txt" />
     <Content Include="slowa.txt" />
+    <Content Include="zadania.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
